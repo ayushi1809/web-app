@@ -9,7 +9,7 @@ import { useNavigate, Link } from "react-router-dom";
 export const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate ();
-  const state = useSelector((state) => state.user);
+  const state = useSelector((state) => state?.user);
   const [email, setEmail] = useState(state?.email);
   const [password, setPassword] = useState(state?.password);
   const [errors, setErrors] = useState({});
@@ -48,7 +48,7 @@ export const Login = () => {
   };
 
   return (
-    <section className="section bg-light">
+    <section className="section  bg-secondary">
       <div className="container ht-100 d-flex justify-content-center align-items-center">
         <div className="card p-2 shadow-lg d-flex card-width-300 justify-content-center align-items-center">
           <h3 className="mb-3">Login</h3>
@@ -75,9 +75,11 @@ export const Login = () => {
               />
                {errors.password && <span>{errors.password}</span>}
             </Form.Group>
+            <div className ="text-center">
             <Button variant="primary" type="submit">
               Submit
             </Button>
+            </div>
           </Form>
         </div>
       </div>
