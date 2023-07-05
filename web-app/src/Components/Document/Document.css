@@ -1,0 +1,27 @@
+table, th, td {  
+    border: 1px solid black;  
+    border-collapse: collapse;
+    width: 50%;  
+}  
+th, td {  
+    padding: 10px;  
+}  
+table#alter tr:nth-child(even) {  
+    background-color: #eee;  
+}  
+table#alter tr:nth-child(odd) {  
+    background-color: #fff;  
+}  
+table#alter th {  
+    color: white;  
+    background-color: gray;  
+}  
+
+.tablehead {
+    margin-left: 390px;
+    margin-top: 130px;
+}
+
+.header{
+    justify-content: start;
+}
